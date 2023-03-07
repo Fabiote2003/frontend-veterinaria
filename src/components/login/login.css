@@ -1,0 +1,129 @@
+:root {
+    --red: #F15959;
+
+}
+
+.login {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+}
+
+.login-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+}
+
+.login-info h1 {
+    width: 350px;
+    font-size: 48px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.login-info img{
+    margin-top: 20px;
+    border-radius: 104px;
+    width: 50%;
+    height: 300px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCD9D9;
+}
+
+.login-container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--red);
+}
+
+.login-container form{
+    margin-top: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form label {
+    color: var(--red);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.login-container form input {
+    height: 41px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.login-container form input:focus {
+    outline: 2px solid var(--red);
+}
+
+.login-button {
+    margin-top: 36px;
+    width: 100%;
+    height: 41px;
+    border-radius: 14px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--red);
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
+
+.login-button:hover {
+    opacity: 0.9;
+}
+
+.login-advice {
+    position: absolute;
+    bottom: 16px;
+    color: #7D7777;
+    font-size: 18px;
+}
+
+.login-advice a {
+    color: var(--red);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-advice a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 800px) {
+    .login {
+        grid-template-columns: 1fr;
+    }
+    .login-info {
+        display: none;
+    }
+
+    .login-container form {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .login-container form {
+        width: 70%;
+    }
+}

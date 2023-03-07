@@ -1,0 +1,57 @@
+:root {
+    --red: #F15959;
+
+}
+
+.client {
+    width: 100%;
+    max-height: 100vh;
+    /* overflow-y: hidden; */
+}
+
+.client h1 {
+    text-align: center;
+    font-size: 38px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.client h1 span {
+    color: var(--red);
+    font-weight: 800;
+}
+
+.client-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.client .logout-button {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border: none;
+    padding: 8px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.client .logout-button:hover {
+    outline: 2px solid #FF0000;
+    background-color: #fff7f7;
+}
+
+@media (max-width: 900px) {
+    .client .client-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,128 @@
+:root {
+    --red: #F15959;
+}
+
+.listado-pacientes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100vh;  
+    overflow-y: hidden;
+}
+
+.listado-pacientes h2 {
+    font-size: 32px;
+}
+
+.listado-pacientes p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.listado-pacientes p span {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.listado-pacientes-items {
+    width: 90%;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+}
+
+.paciente {
+    margin-bottom: 18px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 2px rgb(235, 235, 235);
+}
+
+.paciente-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.paciente-buttons .editar-button {
+    border: none;
+    background-color: rgb(4, 104, 255);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 40px;
+    transition: ease-in-out 0.2s;
+}
+
+.paciente-buttons .editar-button:hover {
+    outline: 2px solid rgb(4, 104, 255);
+    background-color: #fff;
+    color: rgb(4, 104, 255);
+}
+
+.paciente-buttons .eliminar-button {
+    border: none;
+    background-color: rgb(255, 0, 0);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 40px;
+    transition: ease-in-out 0.2s;
+
+}
+
+.paciente-buttons .eliminar-button:hover {
+    outline: 2px solid rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+    background-color: #fff;
+}
+
+@media (max-width: 900px) {
+    .listado-pacientes-items {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        height: 100%;
+        margin-bottom: 10px;
+        overflow-y: visible;
+    }
+
+    .paciente-buttons .editar-button{
+        margin-left: 10px;
+    }
+
+    .paciente-buttons .eliminar-button{
+        margin-right: 10px;
+    }
+
+    .listado-pacientes {
+        overflow-y: visible;
+    }
+
+
+}
+
+@media (max-width: 700px) {
+    .listado-pacientes-items {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .paciente-buttons .editar-button{
+        margin-left: 30px;
+    }
+
+    .paciente-buttons .eliminar-button{
+        margin-right: 30px;
+    }
+}
